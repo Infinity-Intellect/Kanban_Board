@@ -12,6 +12,10 @@ class Column extends Component {
         this.addCard = this.addCard.bind(this)
         this.handleTaskChange = this.handleTaskChange.bind(this)
     }
+    //This method assigns the state newTask with that provided by the user and calls the
+    //prop of the same name
+    //Paramters:
+    //event - the event that triggerd this method 
     addCard = (event) => {
         if (event.keyCode === 13 || event.target.name === "addcard") {
             if (this.state.newTask !== "") {
@@ -21,13 +25,21 @@ class Column extends Component {
             }
         }
     }
+    //This method simply calls the prop of the same
+    //Parameters:
+    //taskId - the ID of the task to be reassigned
+    //direction - an integer denoting whether to move left(-1) or right(1)
     reassignCard = (taskId, direction) => {
         this.props.reassignCard(taskId, this.props.column.columnId, direction)
 
     }
+    //This method simply calls prop of the same name
+    //Parameters:
+    //taskId : the ID of the task to be removed
     removeCard = (taskId) => {
         this.props.removeCard(taskId, this.props.column.columnId)
     }
+    //This method is the event handler for onChange event of input text box
     handleTaskChange = (event) => {
         this.setState({ newTask: event.target.value })
     }
