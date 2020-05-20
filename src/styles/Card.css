@@ -1,0 +1,36 @@
+.Card {
+  border: 2px black solid;
+  margin: 2%;
+}
+.Header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 3%;
+  margin: 2%;
+}
+.CloseButton {
+  color: white;
+  cursor: pointer;
+  background-color: red;
+  width: 200%;
+  border-radius: 50%;
+}
+.Body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.Arrow {
+  width: 200%;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  font-weight: bolder;
+  font-size: 1.5em;
+  padding: 1%;
+  cursor: pointer;
+}
+.TaskDescription {
+  font-size: 1.5em;
+}
